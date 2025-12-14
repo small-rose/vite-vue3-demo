@@ -1,0 +1,43 @@
+{
+  "name": "vue3-vite-element-plus-demo",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.2",
+    "@vueuse/core": "^14.1.0",
+    "@vueuse/integrations": "^14.1.0",
+    "axios": "^1.13.2",
+    "change-case": "^5.4.4",
+    "drauu": "^0.4.3",
+    "element-plus": "^2.12.0",
+    "focus-trap": "^7.6.6",
+    "fuse.js": "^7.1.0",
+    "idb-keyval": "^6.2.2",
+    "jwt-decode": "^4.0.0",
+    "nprogress": "^0.2.0",
+    "qrcode": "^1.5.4",
+    "sm-crypto": "^0.3.13",
+    "sortable": "^2.0.0",
+    "sortablejs": "^1.15.6",
+    "universal-cookie": "^7.2.2",
+    "vue": "^3.5.21",
+    "vue-router": "^4.6.4",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "mockjs": "^1.1.0",
+    "unplugin-auto-import": "^20.3.0",
+    "unplugin-vue-components": "^30.0.0",
+    "vite": "^7.1.7",
+    "vite-plugin-mock": "^2.9.6",
+    "vite-plugin-windicss": "^1.9.4",
+    "windicss": "^3.5.6"
+  }
+}

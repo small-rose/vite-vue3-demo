@@ -1,0 +1,28 @@
+
+D:\dev-tools-JetBrains\front-web\vue3-vite-element-plus-demo>tree /f
+文件夹 PATH 列表
+卷序列号为 C198-49D0
+vue3-vite-element-plus-demo
+|
+├─.vscode
+│      extensions.json
+├─node_modules
+├─public
+│      vite.svg
+└─src
+│   │  App.vue
+│   │  main.js
+│   │  style.css
+│   ├─assets
+│   │      vue.svg
+│   └─components
+|         HelloWorld.vue
+│  .gitignore
+└─index.html
+└── package-lock.json
+└─ package.json
+└─ README.md
+└─ tree.txt
+└─ vite.config.js
+
+D:\dev-tools-JetBrains\front-web\vue3-vite-element-plus-demo>

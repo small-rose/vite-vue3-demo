@@ -1,0 +1,24 @@
+    .login-container{
+        @apply min-h-screen bg-blue-400 ;
+    }
+    .login-container .left{
+        @apply flex items-center justify-center;
+    }
+    .login-container .right{
+        @apply bg-light-50 flex items-center justify-center flex-col ;
+    }
+    .login-container .left .left-title{
+        @apply font-bold text-5xl text-light-50 mb-4 ;
+    }
+    .login-container .left .left-sub-title{
+        @apply text-gray-300 text-sm ;
+    }
+    .login-container .right .back{
+        @apply font-mono text-3xl text-gray-500 ;
+    }
+    .login-container .right .login-tips{
+        @apply flex items-center justify-center my-5 text-gray-300 space-x-2;
+    }
+    .login-container .right .line{
+        @apply h-[1px] w-16 bg-gray-200 ;
+    }
