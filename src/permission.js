@@ -1,5 +1,5 @@
-import router from "./router"; 
-import {getToken} from "~/utils/auth";
+import { router, addRoutes } from "./router"; 
+import { getToken } from "~/utils/auth";
 import { notice, showLoading, hideLoading } from '~/utils/notice';
 import store from "./store";
 
@@ -22,14 +22,21 @@ router.beforeEach(async (to, from, next)=>{
         return next({ path: "/"});
     }
 
+    let hasNewRouter = false ;
     // 如果用户登录了，自动获取用户信息，存储到 vuex 中
     if(token){
-        await store.dispatch("getinfo");
+        let { menus } = await store.dispatch("getinfo");
+        console.log(menus)
+        // 添加动态路由
+        hasNewRouter = addRoutes(menus);
     }
 
     // 设置页面title
     let title = (to.meta.title ? to.meta.title :"small-rose") +"-个人学习系统";
     document.title = title ;
+
+    // 有新路由走新的路由，解决刷新问题
+    //hasNewRouter ?  next(to.fullPath) : next();
     next();
 });
 

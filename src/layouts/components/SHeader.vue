@@ -46,8 +46,11 @@ const handleRefresh = ()=> location.reload();
         <el-icon class="mf-1 mr-1"><eleme-filled/></el-icon>
         个人学习网站
     </span>
-    <el-tooltip content="收起" effect="dark">
-        <el-icon class="icon-btn"><fold/></el-icon>
+    <el-tooltip content="收起/展开" effect="dark">
+        <el-icon class="icon-btn" @click="$store.commit('handleAsideWith')" >
+            <fold v-if="$store.state.asideWidth == '250px'"/>
+            <expand v-else/>
+        </el-icon>
     </el-tooltip>
     <el-tooltip content="刷新" placement="bottom" effect="dark">
         <el-icon class="icon-btn" @click="handleRefresh"><refresh/></el-icon>
@@ -159,6 +162,6 @@ const handleRefresh = ()=> location.reload();
        @apply ml-auto flex items-center ;
     }
     .s-header .dropdown{
-        height: 42ox;
+        height: 42px;
     }
 </style>

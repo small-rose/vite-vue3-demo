@@ -5,13 +5,27 @@ import { setToken, removeToken } from '../utils/auth';
 const store = createStore({
    state () {
       return {
-         user: {}
+        // 用户信息
+         user: {},
+         // 侧边宽度
+         asideWidth:"250px",
+         menus:[],
+         ruleNames:[]
       }
    },
    mutations: {
       SET_USERINFO(state, user) {
          state.user = user;
-      }
+      },
+      handleAsideWith(state) {
+         state.asideWidth = state.asideWidth=="250px"? "64px":"250px";
+      },
+      SET_MENU(state, menus) {
+         state.menus = menus;
+      },
+      SET_RULENAMES(state, ruleNames) {
+         state.ruleNames = ruleNames;
+      },
    },
    actions: {
         // 登录actions
@@ -28,6 +42,8 @@ const store = createStore({
             return new Promise((resolve, reject)=>{
                 getinfo().then(res=>{
                     commit("SET_USERINFO",res.data);
+                    commit("SET_MENU",res.menus);
+                    commit("SET_RULENAMES",res.ruleNames);
                     resolve(res);
                 }).catch(err=>reject(err));
             });
