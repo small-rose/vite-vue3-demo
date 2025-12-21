@@ -59,7 +59,7 @@ export default defineConfig({
     }), 
     viteMockServe({
       mockPath: './src/mock', // Mock文件存放目录
-      localEnabled: true, // 开发环境启用
+      localEnabled: false, // 开发环境启用
       prodEnabled: false, // 生产环境禁用
       watchFiles: true, // 监视文件更改
       logger: true, // 控制台显示请求日志

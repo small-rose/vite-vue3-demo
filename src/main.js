@@ -23,7 +23,9 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 }
 
 app.use(store);
+console.log('挂载路由开始')
 app.use(router);
+console.log('挂载路由完成')
 app.use(ElementPlus);
 
 

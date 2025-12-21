@@ -147,6 +147,7 @@ const handleRefresh = ()=> location.reload();
     .s-header{
         @apply flex items-center bg-indigo-500 text-light-100 fixed top-0 left-0 right-0;
         height: 64px;
+        z-index: 1000;
     }
     .s-logo{
        width: 250px;   

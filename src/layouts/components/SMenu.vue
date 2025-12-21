@@ -108,4 +108,16 @@ const handleSelect =(e) =>{
     transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.1s,
                 max-width 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
 }
+
+/* 针对WebKit浏览器 */
+::-webkit-scrollbar {
+    width: 10px; /* 滚动条的宽度 */
+    height: 10px; /* 滚动条的高度 */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: darkgrey; /* 滚动条的颜色 */
+    border-radius: 10px; /* 滚动条的圆角 */
+}
+
 </style>
